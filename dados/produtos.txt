@@ -1,0 +1,30 @@
+db.produtos.insert([
+	{
+		codigo: 1,
+		descricao: "PC",
+		valor: 1500,
+		quantidade: 15
+	},
+	{
+		codigo: 2,
+		descricao: "Placa de Video",
+		valor: 2000
+	},
+	{
+		codigo: 3,
+		descricao: "Processador",
+		valor: 700
+	},
+	{
+		codigo: 4,
+		descricao: "Mouse",
+		valor: 200,
+		quantidade: 10
+	},
+	{
+		codigo: 5,
+		descricao: "Teclado",
+		valor: 89.99,
+		quantidade: 10
+	}
+]);

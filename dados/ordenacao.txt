@@ -1,0 +1,19 @@
+Ordenando em Ordem decrescente:
+
+db.usuarios.find(
+	{},
+	{_id: 0, cod: 1, nome: 1} 
+).sort({cod: -1}).pretty();
+
+db.usuarios.find(
+	{},
+	{_id: 0, cod: 1, nome: 1} 
+).sort({nome: -1}).pretty();
+
+
+Ordenando em ordem crescente:
+
+db.alunos.find(
+	{},
+	{_id: 0, nome: 1}
+).sort({nome: 1}).pretty();

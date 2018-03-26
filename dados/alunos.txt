@@ -1,0 +1,86 @@
+db.alunos.insert([
+{
+	AlunoId: 1,
+	nome: 	"Lauren",
+	endereco: "Rua A",
+	telefone: "(18) 9980-36954",
+	curso: "Java"
+},
+{
+	AlunoId: 2,
+	nome: 	"Patrick",
+	endereco: "Rua A",
+	telefone: "(18) 9758-36954",
+	curso: "C++"
+},
+{
+	AlunoId: 3,
+	nome: 	"Joseph",
+	endereco: "Rua B",
+	telefone: "(18) 9980-25478",
+	curso: "Assembly"
+},
+{
+	AlunoId: 4,
+	nome: 	"Annie",
+	endereco: "Rua A",
+	telefone: "(18) 9225-36954",
+	curso: "Python"
+},
+{
+	AlunoId: 5,
+	nome: 	"Nathan",
+	endereco: "Rua D",
+	telefone: "(18) 9980-11125",
+	curso: "HTML 5 e CSS3"
+},
+{
+	AlunoId: 6,
+	nome: 	"Sophie",
+	endereco: "Rua B",
+	telefone: "(18) 9980-36954",
+	curso: "Java"
+},
+{
+	AlunoId: 7,
+	nome: 	"Emma",
+	endereco: "Rua A",
+	telefone: "(18) 9789-36954",
+	curso: "Ruby"
+},
+{
+	AlunoId: 8,
+	nome: 	"Charlie",
+	endereco: "Rua A",
+	telefone: "(18) 9980-99568",
+	curso: ".Net Visual Studio C#"
+},
+{
+	AlunoId: 9,
+	nome: 	"Matheus",
+	endereco: "Rua E",
+	telefone: "(18) 9980-33338",
+	curso: "Web Design"
+},
+{
+	AlunoId: 10,
+	nome: 	"Isaac",
+	endereco: "Rua Z",
+	telefone: "(18) 9980-66687",
+	curso: "Assembly"
+},
+{
+	AlunoId: 11,
+	nome: 	"Eliza",
+	endereco: "Rua F",
+	telefone: "(18) 1125-36954",
+	curso: "MySQL"
+},
+{
+	AlunoId: 12,
+	nome: 	"Valentina",
+	endereco: "Rua G",
+	telefone: "(18) 9450-36451",
+	curso: "Rust"
+}
+]);

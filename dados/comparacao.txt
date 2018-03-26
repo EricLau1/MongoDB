@@ -1,0 +1,56 @@
+
+$eq: operador de igualdade
+
+db.produtos.find({
+	quantidade: {
+		$not: {
+			$eq: 10
+		}
+	}
+}).pretty();
+
+
+$ne: operador para negar igualdade
+
+db.produtos.find({
+	quantidade: {
+		$ne: 10
+	}
+}).pretty();
+
+
+$gt: operador maior que (>=)
+
+db.alunos.find({
+	AlunoId: {
+		$gt: 9
+	}
+}).pretty();
+
+
+$lt: operador menor que (<=)
+
+db.produtos.find({
+	valor: {
+		$lt: 1000
+	}
+}).pretty();
+
+
+$lte: operador menor ou igual à
+
+db.produtos.find({
+	valor: {
+		$lte: 1500
+	}
+}).pretty();
+
+
+$gte: operador maior ou igual à
+
+db.produtos.find({
+	$and: [
+		{valor: {$gte: 1000}},
+		{valor: {$lte: 2000}}
+	]	
+}).pretty();

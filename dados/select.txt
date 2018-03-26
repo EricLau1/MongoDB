@@ -1,0 +1,24 @@
+db.usuarios.find(
+	{cod: 3},
+	{cod: 3}
+).pretty();
+
+o parametro 1 indica que o atributo será mostrado.
+
+db.produtos.find(
+	{},
+	{descricao: 1, valor: 1}
+).pretty();
+
+
+o parametro 0 indica que o atributo será escondido.
+
+db.produtos.find(
+	{},
+	{valor: 0, quantidade: 0}
+).pretty();
+
+
+db.alunos.find({nome: {$regex: /u/}}).pretty();
+
+db.alunos.find({}).count();

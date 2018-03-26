@@ -1,0 +1,144 @@
+Insert basico
+db.usuarios.insert({
+	cod: 1, 
+	nome: "Jane Doe"
+});
+db.usuarios.insert({
+	cod: 2, 
+	nome: "Jhon Doe", 
+	email: "jhon@gmail.com"
+});
+db.usuarios.insert({
+	cod: 3, 
+	nome: "Nancy", 
+	nascimento: new Date() , 
+	email: "nancy@gmail.com", 
+	sexo: "F"
+});
+
+Insert com Vetores
+
+db.usuarios.insert({
+	cod: 4,
+	nome: "McDonalds",
+	email: "mcdonalds@gmail.com",
+	comidas: ["Hamburguer", "Coca-Cola", "Milk-Shake", "Batata Frita"]
+});
+
+Insert com Objetos
+
+db.usuarios.insert({
+	cod: 5,
+	nome: "Amy Adams",
+	profissao: "Atriz",
+	email: "adams@email.com",
+	filmes: {
+		lancamento: 2016,
+		titulo: "A Chegada",
+		personagem: "Dr. Louise Banks",
+		generos: ["ação", "misterio", "suspense"]
+	}
+});
+
+
+/* Coleção de produtos */
+
+
+db.produtos.insertOne({
+	cod: 1, 
+	descricao: "Notebook"
+});
+
+db.produtos.insert([
+	{
+		cod: 2,
+		descricao: "Placa de Video",
+		valor: 1700.00
+	},
+	{
+		cod: 3,
+		descricao: "Mouse"
+	},
+	{
+		cod: 4,
+		descricao: "Teclado"
+	}
+]);
+
+
+db.produtos.insertMany([
+	{
+		cod: 5,
+		descricao: "Monitor",
+		tela: 15.4	
+	},
+	{
+		cod: 6,
+		descricao: "Gabinete"
+	},
+	{
+		cod: 7,
+		descricao: "Fonte",
+		valor: 575.86
+	}
+]);
+
+/* Update */
+
+
+db.usuarios.update(
+	{cod: 2}, 
+	{
+		$set: {
+			nome: "Jon", email: "jon@gmail.com"
+		}
+	}
+);
+
+
+db.usuarios.updateOne(
+	{cod: 3},
+	{
+		$set: {
+			nome: "Dany",
+			email: "dan@gmail.com",
+			sexo: "M"
+		}
+	}
+);
+
+/* dois inserts para testar o updateMany() */
+
+db.usuarios.insertMany([
+	{cod: 9, nome: "Mabel", online: 1},
+	{cod: 10, nome: "Dipper", online: 1}
+]);
+
+db.usuarios.updateMany(
+	{online: 1}, 
+	{ 
+		$set: {
+			online: 0
+		}
+	}
+);
+
+/* Substituindo Objeto */
+
+db.usuarios.update(
+	{cod: 10},
+	{nome: "Jujuba"}
+);
+
+
+/* remove, remove todos os documentos */
+
+db.produtos.remove({});
+
+db.usuarios.remove({nome: "Jujuba"});
+
+
+
+
+
+

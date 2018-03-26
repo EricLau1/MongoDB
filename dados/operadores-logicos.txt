@@ -1,0 +1,55 @@
+AND.
+
+db.alunos.find({
+	$and: [
+		{endereco: "Rua A"},
+		{curso: "Java"}
+	]
+
+}).pretty();
+
+
+OR.
+
+db.alunos.find({
+	$or: [
+		{curso: "Java"},
+		{curso: "Python"}
+	]
+
+}).pretty();
+
+
+EXISTS(TRUE).
+
+db.usuarios.find({
+	nascimento: {$exists: true}
+}).pretty();
+
+
+EXISTS(TRUE).
+
+db.usuarios.find({
+	email: {$exists: false}
+}).pretty();
+
+
+NOT.
+
+db.alunos.find({
+	endereco: {
+		$not: {
+			$eq: "Rua A"
+		}
+	}
+}).pretty();
+
+
+NOR.
+
+db.alunos.find({
+	$nor: [
+		{curso: "Java"},
+		{endereco: "Rua A"}
+	]
+}).pretty();

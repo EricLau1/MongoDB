@@ -1,0 +1,19 @@
+db.clientes.insert({ ClienteId: 1, nome: "Marie"});
+
+var cliente = db.clientes.findOne({ClienteId: 1});
+
+var produtos = db.produtos.find(
+	{
+		$and: [
+			{codigo: {$gte: 2}},
+			{codigo: {$lte: 3}}
+		]
+	}
+).limit(2).toArray();
+
+db.vendas.insert(
+	{
+		cliente: cliente,
+		produtos: produtos
+	}
+);
